@@ -38,7 +38,64 @@ const items = [
         price: '10.00',
         product_img:'./images/food5.png',
         qty:0
+    },
+    {
+        id: 5,
+        name: 'burger',
+        ingredients: 'Chiken Burger',
+        price: '10.00',
+        product_img:'./images/food5.png',
+        qty:0
+    },
+    {
+        id: 6,
+        name: 'burger',
+        ingredients: 'Chiken Burger',
+        price: '10.00',
+        product_img:'./images/food5.png',
+        qty:0
+    },
+    {
+        id: 7,
+        name: 'burger',
+        ingredients: 'Chiken Burger',
+        price: '10.00',
+        product_img:'./images/food5.png',
+        qty:0
+    },
+    {
+        id: 8,
+        name: 'burger',
+        ingredients: 'Chiken Burger',
+        price: '10.00',
+        product_img:'./images/food5.png',
+        qty:0
+    },
+    {
+        id: 9,
+        name: 'burger',
+        ingredients: 'Chiken Burger',
+        price: '10.00',
+        product_img:'./images/food5.png',
+        qty:0
+    },
+    {
+        id: 10,
+        name: 'burger',
+        ingredients: 'Chiken Burger',
+        price: '10.00',
+        product_img:'./images/food5.png',
+        qty:0
+    },
+    {
+        id: 11,
+        name: 'burger',
+        ingredients: 'Chiken Burger',
+        price: '10.00',
+        product_img:'./images/food5.png',
+        qty:0
     }
+    
 ];
 function getItem(product_id: number) {
     

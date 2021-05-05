@@ -14,7 +14,8 @@ const Menulist=(props:any)=> {
         let product = getItem(x)??{} as any;  
                       
         if (product !== undefined && product !== null) {
-            
+            product.qty = 0;
+            console.log(props.cart_products)
             props.cart_products.forEach((val:any) => {
                 if (val.product_id === x) {
                     product.qty=val.qty
@@ -35,7 +36,7 @@ const Menulist=(props:any)=> {
         <Container>
             
             {list}
-            <ItemModal show={modalShow} {...product} setcartmyvalue={setCartValue}
+            <ItemModal show={modalShow} {...product} setcartmyvalue={props.setCartValue}
                 onHide={() => setModalShow(false)}></ItemModal>
         </Container>
     )
@@ -45,6 +46,6 @@ const mapStateToProps = (state: any) => ({
     cart_products: state.cart.products
 })
 const mapDispatchToProps = (dispatch: any) => ({
-    setcartmyvalue: (product: any) => dispatch(setCartValue(product))
+    setCartValue: (product: any) => dispatch(setCartValue(product))
 })
 export default connect(mapStateToProps, mapDispatchToProps)(Menulist);

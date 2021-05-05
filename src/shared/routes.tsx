@@ -1,16 +1,27 @@
 import React from 'react';
-import { Switch, Route } from 'react-router-dom'
+import { Switch, Route, BrowserRouter as Router } from 'react-router-dom'
 import App from '../App';
 import Checkout from '../components/checkout'
-const Routes = () => (
-    <div>
-        <main>
-            <Switch>
-                <Route exact path="/" component={App} />
-                <Route exact path="/checkout" component={Checkout} />
-            </Switch>
-        </main>
-    </div>
+import Home from '../components/Home/Home'
+const Routes = (HeaderComponent: any) => (
+    class extends React.Component {
+        render() {
+            return (<Router>
+                
+                        <HeaderComponent></HeaderComponent>
+                        <Switch>
+                            <Route exact path="/">
+                                <Home />
+                            </Route>
+                            <Route path="/checkout">
+                                <Checkout></Checkout>
+                            </Route>
+                        </Switch>
+                  
+            </Router>)
+        }
+    }
+
 );
 
 export default Routes;

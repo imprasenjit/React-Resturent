@@ -5,8 +5,9 @@ const ItemModal = (props: any) => {
     //console.log(props.cart_products);
     const [qty, setQty] = useState(0)
     useEffect(() => {
+        console.log(props)
         setQty(props.qty)
-    },[props.cart_products,props.qty])
+    },[props])
     return (
         <Modal {...props} aria-labelledby="contained-modal-title-vcenter">
             <Modal.Header closeButton>
@@ -55,7 +56,8 @@ const ItemModal = (props: any) => {
                     props.onHide()
                     props.setcartmyvalue({
                         product_id: props.id,
-                        qty: qty
+                        qty: qty,
+                        price:props.price
                     })
                 }}>Add to cart</Button>
             </Modal.Footer>
