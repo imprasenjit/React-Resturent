@@ -5,8 +5,7 @@ const ItemModal = (props: any) => {
     //console.log(props.cart_products);
     const [qty, setQty] = useState(0)
     useEffect(() => {
-        console.log(props)
-        setQty(props.qty)
+        setQty(props.qty?props.qty:0)
     },[props])
     return (
         <Modal {...props} aria-labelledby="contained-modal-title-vcenter">
