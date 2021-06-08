@@ -55,7 +55,9 @@ const ItemModal = (props: any) => {
                     props.onHide()
                     props.setcartmyvalue({
                         product_id: props.id,
+                        product_img:props.product_img,
                         qty: qty,
+                        name:props.name,
                         price:props.price
                     })
                 }}>Add to cart</Button>

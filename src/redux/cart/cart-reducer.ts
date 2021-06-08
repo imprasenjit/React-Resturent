@@ -12,7 +12,7 @@ const cartReducer = (
       //console.log(state.products.length);
       if (state.products.length > 0) {
         newArr = state.products.filter((val: any) => {
-          return (val.product_id !== action.payload.product_id)
+          return val.product_id !== action.payload.product_id;
         });
         newArr.push(action.payload);
       } else {
@@ -23,6 +23,19 @@ const cartReducer = (
         ...state,
         products: newArr,
       };
+    case "REMOVE_PRODUCT":
+      if (state.products.length > 0) {
+        let newArr = [];
+        newArr = state.products.filter((val: any) => {
+          return val.product_id !== action.payload;
+        });
+        return {
+          ...state,
+          products: newArr,
+        };
+      } else {
+        return state;
+      }
 
     default:
       return state;

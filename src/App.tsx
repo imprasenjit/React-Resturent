@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Header from './components/header'
+import Header from './components/header/header'
 import { Container, Row, Col } from 'react-bootstrap'
 import { Provider } from 'react-redux'
 import store from './redux/store'
