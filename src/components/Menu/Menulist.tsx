@@ -1,11 +1,11 @@
 import Menuitem from './menuitem/MenuItem'
-import { useState } from 'react'
+import React,{useState } from 'react'
 import { items, getItem } from '../../data/items'
 import ItemModal from './menuitem/ItemModal'
 import { Container } from 'react-bootstrap'
 import { setCartValue } from '../../redux/cart/cart-actions'
 import { connect } from 'react-redux'
-const Menulist = (props: any) => {
+const Menulist = React.memo((props: any) => {
     const [modalShow, setModalShow] = useState(false)
     const [product, setProduct] = useState({})
     function itemClick(x: any) {
@@ -36,7 +36,7 @@ const Menulist = (props: any) => {
                 onHide={() => setModalShow(false)}></ItemModal>
         </Container>
     )
-}
+})
 const mapStateToProps = (state: any) => ({
     cart_products: state.cart.products
 })
